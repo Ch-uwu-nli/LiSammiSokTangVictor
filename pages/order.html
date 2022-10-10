@@ -1,94 +1,72 @@
-<!-- By Sammi LI, Victor SOK TANG and Julie YANG-->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout</title>
+    <title>Order</title>
 </head>
 <body>
     <header>
-        <div align="center">
-        <table>
-            <tr>
-                <td>
-                    <a href="index.html" class="logo"><img src="assets/img/logo.svg" alt="Onlineshoplogo" width="50%" height="50%"></a>
-                </td>
-        
-                <td>
-                    <a href="index.html"><button><h3>Accueil</h3></button></a>
-                </td>
-
-                <td>
-                    <a href="pages/product.html"><button><h3>Produits</h3></button></a>
-                </td>
-
-                <td>
-                    <a href="pages/contact.html"><button><h3>Contact</h3></button></a>
-                </td>
-
-                <td>
-                    <a href="pages/shopping-cart.html"><button><h3>Panier</h3></button></a>
-                </td>
-            </tr>
-        </table> 
-        </div>                   
+        <a href="../index.html" class="logo"><img src="../assets/img/logo.svg" alt="Onlineshoplogo" width="50%" height="50%"></a>
+        <a href="./index.html">Accueil</a>
+        <a href="product.html">Produits</a>
+        <a href="contact.html">Contact</a>
+        <a href="shopping-cart.html">Panier</a>
     </header>
-    <div class="contact">
-        <h1>Contact</h1>
-        <form action="#">
+    <form action="confirmation.html" method="GET">
+        <div id="contact">
+            <h1>Contact</h1>
             <label for="firstname">First name:</label>
-            <input type="text" id="firstname" required><br><br>
+            <input
+                type="text" name="first name" id="firstname"
+                placeholder="John"
+                pattern="[A-Za-z]{}"
+                required
+            >
             <label for="lastname">Last name:</label>
-            <input type="text" id="lastname" required><br><br>
-            <label for="email">E-mail address:</label>
-            <input type="text" id="email" required><br><br>
+            <input 
+                type="text" name="last name" id="lastname"
+                placeholder="Doe"
+                pattern="[A-Za-z]{}"
+                required
+            >
+            <label for="email">Email address:</label>
+            <input 
+                type="email" name="email" id="email" 
+                placeholder="example@email.com"
+                required
+            >
             <label for="phone">Phone number:</label>
-            <input type="text" id="phone" required><br><br>
-        </form>
-    </div>
-    <div class="payment">
-        <h1>Payment method</h1>
-            <form action="#">
-                <label for="creditcard">Card number: </label>
-                <input id="creditcard" required><br><br>
-                <label for="creditcardexpiry">Expiry date: </label>
-                <input id="creditcardexpiry" required><br><br>
-                <label for="cardholder">Card holder's name: </label>
-                <input id="cardholder" required><br><br>
-                <input type="submit" value="pay now">
-            </form>
-        <!--<button type=""><a href="shopping-cart.html">Cancel</a></button>-->
-    </div>
+            <input 
+                type="tel" name="phone number" id="phone" 
+                placeholder="5141234567"
+                pattern="[0-9]{10}"
+                required
+            >
+        </div>
+        <div id="payment">
+            <h1>Payment method</h1>
+            <label for="creditcard">Card number: </label>
+            <input 
+                id="creditcard" required
+                placeholder="XXXX-XXXX-XXXX-XXXX"
+                pattern="[0-9]{16}"
+                title="This field must contain 16 digits"
+            >
+            <label for="creditcardexpiry">Expiry date: </label>
+            <input 
+                id="creditcardexpiry" required
+                placeholder="mm/yy"
+                pattern="(0?[1-9]|1[012])/\d{2}"
+            >
+        </div>
+        <button type="submit">pay now</button>
+    </form>
+    <a href="shopping-cart.html"><button >Cancel</button></a>
 </body>
+<hr>
 <footer>
-    <div align="center">
-    <table>
-        <tr>
-            <td>
-                <a href="index.html" class="logo"><img src="assets/img/logo.svg" alt="Onlineshoplogo" width="50%" height="50%"></a>
-            </td>
-    
-            <td>
-                <a href="index.html"><button><h3>Accueil</h3></button></a>
-            </td>
-
-            <td>
-                <a href="pages/product.html"><button><h3>Produits</h3></button></a>
-            </td>
-
-            <td>
-                <a href="pages/contact.html"><button><h3>Contact</h3></button></a>
-            </td>
-
-            <td>
-                <a href="pages/shopping-cart.html"><button><h3>Panier</h3></button></a>
-            </td>
-        </tr>
-    </table> 
-    </div>                   
+    <p>par Sammi Li (20249291), Tang-Victor Sok (20202206) et Julie Yang (20239909)</p>                 
 </footer>
 </html>
-<!-- note from Sammi: cwhere is this page linked to? -->
